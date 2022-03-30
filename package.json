@@ -1,0 +1,42 @@
+{
+  "name": "sunegg",
+  "version": "1.0.2",
+  "main": "main.js",
+  "devDependencies": {
+    "electron": "^11.2.2",
+    "electron-builder": "^22.9.1"
+  },
+  "build": {
+    "appId": "net.sunegg.app",
+    "productName": "sunegg",
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "icon": "img/icon.png",
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "perMachine": true,
+      "unicode": true
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --x64"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
